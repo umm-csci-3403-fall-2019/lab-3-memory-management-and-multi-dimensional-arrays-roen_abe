@@ -1,7 +1,9 @@
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdio.h>
 #include "mergesort.h"
 
-void mergesort(int, int*) {
-  // This obviously doesn't actually do any *sorting*, so there's
-  // certainly work still to be done.
-  return;
+bool needsSorting(int rangeSize)
+{
+	return rangeSize >= 2;
 }
