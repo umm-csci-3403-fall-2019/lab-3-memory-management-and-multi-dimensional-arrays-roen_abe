@@ -47,3 +47,15 @@ void mergeRanges(int values[], int startIndex, int midPoint, int endIndex)
 	}
 	free(destination);
 }
+
+void mergesortRange(int  values[],  int startIndex, int endIndex)
+{
+	int rangeSize = endIndex - startIndex;
+	if(needsSorting(rangeSize))
+	{
+	 	int midPoint = (startIndex + endIndex) / 2;
+		mergesortRange(values,  startIndex, midPoint);
+  		mergesortRange(values , midPoint, endIndex);
+		mergeRanges (values, startIndex, midPoint , endIndex);
+	}
+}
