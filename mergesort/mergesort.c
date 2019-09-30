@@ -59,3 +59,7 @@ void mergesortRange(int  values[],  int startIndex, int endIndex)
 		mergeRanges (values, startIndex, midPoint , endIndex);
 	}
 }
+
+void mergesort( int size, int values[]) {
+  mergesortRange(value, 0 , size);
+}
