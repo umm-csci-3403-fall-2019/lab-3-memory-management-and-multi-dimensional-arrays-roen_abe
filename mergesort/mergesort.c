@@ -58,7 +58,7 @@ void mergesortRange(int  values[],  int startIndex, int endIndex)
   		mergesortRange(values , midPoint, endIndex);
 		mergeRanges (values, startIndex, midPoint , endIndex);
 	}
-}
+} 
 
 void mergesort( int size, int values[]) {
   mergesortRange(values, 0 , size);
