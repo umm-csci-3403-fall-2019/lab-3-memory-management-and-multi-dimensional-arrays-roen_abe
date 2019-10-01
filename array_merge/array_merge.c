@@ -36,10 +36,24 @@ for(int i=0; i<size; i++){
   printf("Next is %d \n", presortedArray[i]);
 }
 
-// sort the combined array using the mergesort
-
-
-//count the repeated values form the combined array
+int removedupe(int* array, int size){
+  int* temp = (int*) malloc(size * sizeof(int));
+  int j;
+  if (size < 2){
+    return size
+  }
+  for(int i=0; i<size-1; i++){
+    if (array[i] != array[i+1]){
+      temp[j++] = array[i];
+    }
+  }
+  temp[j++] = arr[size-1];
+  for (int i=0; i<j; i++){
+    arr[i]=temp[i];
+  }  
+  free(temp);
+  return j;
+}
 
 free(presortedArray);
 
@@ -56,11 +70,7 @@ int a0[] = {0, 2, 1};
 int a1[] = {3, 5, 5};
 int a2[] = {6, 7, 7};
 int* values[] = {a0, a1, a2};
-// {{0, 1, 2}, {3, 4, 5}, {6, 7, 8}};
-array_merge(num_arrays, sizes, values);
 
-  // for(int i=0; i<sizeof(presortedArray); i++){
-  //   printf("Next is %d \n", presortedArray[i]);
-  // }
+array_merge(num_arrays, sizes, values);
 
 }
